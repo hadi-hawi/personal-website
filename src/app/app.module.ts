@@ -7,9 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
+import { CustomButtonComponent } from './custom-button/custom-button.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent,HeaderComponent, AboutComponent, SkillsComponent, FooterComponent], // Add the root component to 'declarations'
+  declarations: [AppComponent, HomeComponent, HeaderComponent, AboutComponent, SkillsComponent, FooterComponent, CustomButtonComponent,], // Add the root component to 'declarations'
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent] // Add the root component to 'bootstrap'

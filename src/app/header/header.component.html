@@ -1,17 +1,14 @@
-<header>
-
-
+<header [ngClass]="{'sticky': isSticky}">
     <div class="logo"><span>H</span>ADI.</div>
-    
-    <ul class="navlist">
-       
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <ul class="navlist" [ngClass]="{'open': isMobileMenuOpen}">
+      <li><a href="#home" (click)="closeMobileMenu()">Home</a></li>
+      <li><a href="#about" (click)="closeMobileMenu()">About</a></li>
+      <li><a href="#services" (click)="closeMobileMenu()">Services</a></li>
+      <li><a href="#skills" (click)="closeMobileMenu()">Skills</a></li>
+      <li><a href="#profile" (click)="closeMobileMenu()">Profile</a></li>
+      <li><a href="#contact" (click)="closeMobileMenu()">Contact</a></li>
     </ul>
-    <div id="menu-icon" class="bx bx-menu"></div>
-
-</header>
+    <div id="menu-icon" class="bx bx-menu" (click)="toggleMobileMenu()" *ngIf="!isMobileMenuOpen"></div>
+    <div id="close-icon" class="bx bx-x" (click)="toggleMobileMenu()" *ngIf="isMobileMenuOpen"></div>
+  </header>
+  
